@@ -1,0 +1,36 @@
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#div1{
+			width: 200px;
+			height: 200px;
+			background: red;
+		}
+		#div2{
+			width: 100px;
+			height: 100px;
+			background: blue;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="div1">
+		<div id="div2">
+			
+		</div>
+	</div>
+<script type="text/javascript">
+	var oDiv1 = document.getElementById('div1');
+	var oDiv2 = document.getElementById('div2');
+	oDiv1.onclick = function(){
+		alert('下');
+	}
+	oDiv2.onclick = function () {
+		alert('上');
+	}
+
+</script>
+</body>
+</html>

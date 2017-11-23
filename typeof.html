@@ -1,0 +1,14 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+	//typeof 返回的类型有 number,boolean,string,function,object,undefined。function 是 object 的子集
+		var object = {}
+		object.__proto__ = Array.prototype; //原型链
+		console.log(typeof(Array)); // function
+		console.log(object instanceof Array); // 如果没有第九行则显示false，有则显示true这个是原型链的概念
+	</script>
+</body>
+</html>

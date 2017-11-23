@@ -1,0 +1,24 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		// __proto__ 为隐式原型 和 prototype 为显示原型
+		function b () {
+			this.name = 'zhangsan';
+			this.age = 12;
+		}
+
+		b.prototype.hobby = 'playing'
+		function a () {
+		}
+
+		var a = new b();
+		console.log(a.name)
+		console.log(a.age)
+		console.log(a.hobby)
+		// console.log(a.__proto__ == b.prototype);
+	</script>
+</body>
+</html>

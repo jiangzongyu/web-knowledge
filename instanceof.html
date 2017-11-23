@@ -1,0 +1,16 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		function b (){}
+		function c() {}
+		var a = new b();
+		var d = new Array();
+		console.log(a instanceof b); // true  a 是 b的实例
+		console.log(a instanceof c); // false
+		console.log(d instanceof Array); // true 这是因为 Array 是 object 的子类
+	</script>
+</body>
+</html>
