@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <ul id="ul">
+            <!-- <li>hah</li> -->
+        </ul>
+    </div>
+    <button id="btn">add</button>
+    <button id="rem">remove</button>
+    <script>
+        var oBtn = document.getElementById('btn');
+        var oUl = document.getElementById('ul');
+        var oLi = document.createElement('li');
+        var oRem = document.getElementById('rem');
+        oLi.innerHTML = "new node";
+        oBtn.onclick = function(){
+            oUl.appendChild(oLi);
+        }
+        oRem.onclick = function(){
+            oUl.removeChild(oLi);
+        }
+    </script>
+</body>
+</html>
