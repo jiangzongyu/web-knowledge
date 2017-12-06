@@ -5,22 +5,21 @@
 <body>
 	<script type="text/javascript">
 	// 最好情况为O(n) 最坏情况O(n^2)
+		var temp;
 		function sort(arr){
-			var temp;
 			for(var i=0;i<arr.length-1;i++){
 				for(var j=i+1;j<arr.length;j++){
-					if(parseInt(arr[i])<parseInt(arr[j])){
-						temp = parseInt(arr[j]);
-						parseInt(arr[j]) = parseInt(arr[i]);
-						parseInt(arr[i])=temp;
+					if(arr[i]>arr[j]){
+						temp = arr[j];
+						arr[j] = arr[i];
+						arr[i]=temp;
 					}
 					
 				}
 			}
-			// return arr[0]*arr[1]*arr[2];
 			return arr;
 		}
-		var  arr = [1, -5, -2, 3];
+		var  arr = [1, 4, 6, 3];
 		console.log(sort(arr));
 	</script>
 </body>
