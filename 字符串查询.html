@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function count(str){
+            var newString = str.match(/\S/g);
+            var obj1={};
+            console.log(newString);
+            var obj={};
+            for(var i in newString) {
+                if(obj[newString[i]]){
+                    obj[newString[i]]++;
+                }
+                else{
+                    obj[newString[i]] = 1;
+                }
+            }
+
+            return obj
+        }
+        // console.log(count('hello world'))
+        count('hello world')
+    </script>
+</body>
+</html>

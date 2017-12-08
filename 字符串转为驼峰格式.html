@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function cssStyle2DomStyle(sName) {
+            var arr = sName.split(''); 
+            if(arr.indexOf('-') == 0)
+                arr.splice(0,1);
+            for(var i=0; i<arr.length; i++){
+                if(arr[i] == '-'){
+                    arr.splice(i,1);
+                    arr[i] = arr[i].toUpperCase();
+                }
+            }
+            return arr.join('');
+        }
+        console.log(cssStyle2DomStyle('-webkit-border-image'))
+    </script>
+</body>
+</html>
