@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var parser = document.createElement('a');    
+        parser.href = "http://example.com:3000/pathname/?search=test#hash";    
+        obj = {
+            protocol:parser.protocol, // => "http:"    
+            hostname:parser.hostname, // => "example.com"    
+            port:parser.port,     // => "3000"    
+            pathname : parser.pathname, // => "/pathname/"    
+            search : parser.search,   // => "?search=test"    
+            hash : parser.hash,    // => "#hash"    
+            host : parser.host     // => "example.com:3000"    
+        }
+        console.log(obj);
+    </script>
+</body>
+</html>

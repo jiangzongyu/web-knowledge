@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        Array.prototype.uniq = function () {
+            var newarray=[];
+            var hasNaNlen=0;
+            for(var i = 0;i<this.length;i++){
+                if(this[i]!=this[i]){
+                    hasNaNlen++;
+                };
+                if(newarray.indexOf(this[i])==-1){
+                    if(hasNaNlen<=1){
+                        newarray.push(this[i]);
+                    }
+                }
+            }
+            return newarray;
+        }
+        var arr = [ NaN, 0, 1, {}, {}, 'a', 'a', NaN];
+        console.log(arr.uniq());
+    </script>
+</body>
+</html>
