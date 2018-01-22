@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="drag" style="width:100px;height:100px;position:absolute;background:red"></div>
+    <script>
+        // 注意 : offsetLeft只能取值不能赋值
+        (function(){
+            let oDrag = document.getElementById('drag')
+            oDrag.onmousedown = function(e){
+                let oEvent = e || event;
+                let iDisX = oEvent.clientX - oDrag.offsetLeft;
+                let iDisY = oEvent.clientY - oDrag.offsetTop;
+                document.onmousemove = function(e){
+                    let oEventOne = e || event;
+                    let iCurrentLeft = oEventOne.clientX - iDisX;
+                    let iCurrentTop = oEventOne.clientY - iDisY;
+                    if(iCurrentLeft < 0){
+                        iCurrentLeft = 0  ;
+                    }else if(document.documentElement.clientWidth - oDrag.offsetWidth < iCurrentLeft ){
+                        // 当前文档X轴可视区域大小包括左右边框线宽度 - `登录窗口` X轴区域大小包括左右边框线宽度
+                        iCurrentLeft = document.documentElement.clientWidth - oDrag.offsetWidth
+                    }
+                    if(iCurrentTop < 0){
+                        iCurrentTop = 0  ;
+                    }else if(document.documentElement.clientHeight - oDrag.offsetHeight < iCurrentTop ){
+                        // 当前文档X轴可视区域大小包括左右边框线宽度 - `登录窗口` X轴区域大小包括左右边框线宽度
+                        iCurrentTop = document.documentElement.clientHeight - oDrag.offsetHeight
+                    }
+                    oDrag.style.left = iCurrentLeft + 'px';
+                    oDrag.style.top = iCurrentTop + 'px';
+                }
+                document.onmouseup = function(){
+                    document.onmousemove = null;
+                    document.onmouseup = null;
+                }
+                return false;
+            }
+        })()
+    </script>
+</body>
+</html>
