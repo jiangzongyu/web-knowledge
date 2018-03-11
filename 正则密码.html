@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function check(pwd){
+            if(pwd.length>6 && pwd.length<16){
+                var reg = new RegExp(/[A-Za-z]+\d+/);
+                return reg.test(pwd);
+            }else{
+                return false
+            }
+        }
+        console.log(check('123456789'))
+    </script>
+</body>
+</html>5
