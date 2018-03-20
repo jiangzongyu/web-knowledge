@@ -13,10 +13,10 @@
     <div>DOV 2</div>
 
     <script>
-        let divs = document.getElementsByTagName('div')
-        for (let i = 0; i < divs.length; i++) {
+        let oDiv = document.getElementsByTagName('div')
+        for (let i = 0; i < oDiv.length; i++) {
             (function (n) {
-                divs[n].addEventListener('click', function () {
+                oDiv[n].addEventListener('click', function () {
                     alert(n)
                 })
             })(i);

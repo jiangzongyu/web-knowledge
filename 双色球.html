@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function guess(){
+            var newArr = []
+            var red
+            var i=0
+            do{
+                var index = Math.ceil(33*Math.random())
+                if(newArr.indexOf(index)==-1){
+                    newArr.push(index)
+                    i++
+                }
+            }while(i < 6)
+            red = Math.ceil(16*Math.random())
+            return {'黑色球':newArr,'红色球':red}
+        }
+        console.log(guess())
+    </script>
+</body>
+</html>
