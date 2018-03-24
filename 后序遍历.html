@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var tree = {
+                value: 1,
+                left: {
+                    value: 2,
+                    left: {
+                        value: 3
+                    },
+                    right:{
+                        value:4
+                    }
+                },
+                right: {
+                    value: 5,
+                    right: {
+                        value: 6,
+                        left: {
+                            value: 7
+                        },
+                        
+                    }
+                }
+            }
+            var postOrder = function (node) { 
+                    if (node) {
+                        postOrder(node.left);
+                        postOrder(node.right);  
+                        console.log(node.value);
+                    }
+                }
+
+                console.log(postOrder(tree))
+    </script>
+</body>
+</html>
