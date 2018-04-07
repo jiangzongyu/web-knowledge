@@ -10,14 +10,13 @@
 			this.age = 12;
 		}
 
-		b.prototype.hobby = 'playing'
 		function a () {
 		}
-
-		var a = new b();
-		console.log(a.name)
-		console.log(a.age)
-		console.log(a.hobby)
+		b.prototype = new a()
+		
+		var B = new b();
+		console.log(B.name)
+		console.log(B.age)
 		// console.log(a.__proto__ == b.prototype);
 	</script>
 </body>

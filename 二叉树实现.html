@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Tree(element){
+            this.element = element
+            // this.parent = null
+            this.left = null
+            this.right = null
+        }
+
+
+        function newTree(){
+            var root = new Tree('1')
+            this.root = root
+            var left = new Tree('2')
+            // left.parent = root
+            root.left = left
+            var right = new Tree('3')
+            root.right = right;
+            var left1 = new Tree('4')
+            root.left.left = left1
+            var right1 = new Tree('5')
+            root.left.right = right1
+            var current = new Tree('6')
+            current.left = root.left.left
+            current.right =root.left.right
+            root.left = current
+            
+            
+        }
+
+        console.log(new newTree())
+        
+    </script>
+</body>
+</html>
