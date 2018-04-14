@@ -8,15 +8,17 @@
 </head>
 <body>
     <script>
+        // 包含数字、字母大写、字母小写
         function check(pwd){
             if(pwd.length>6 && pwd.length<16){
-                var reg = new RegExp(/[A-Za-z]+\d+/);
+                var reg = new RegExp(/([a-z]+.*((\d+.*[A-Z]+)|([A-Z]+.*\d+)).*)|([A-Z]+.*((\d+.*[a-z]+)|([a-z]+.*\d+)).*)|(\d+.*(([a-z]+.*[A-Z]+)|([A-Z]+.*[a-z]+)).*)/);
                 return reg.test(pwd);
             }else{
                 return false
             }
         }
-        console.log(check('123456789'))
+        
+        console.log(check('a.a123a4$56'))
     </script>
 </body>
 </html>5

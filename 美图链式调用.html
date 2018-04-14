@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Box(width,height,color){
+            this.width = width+'px'
+            this.height = height+'px'
+            this.color = color
+            this.addTo = function(by){
+                var oBody = document.getElementsByTagName(by)[0]
+                var div = document.createElement('div')
+                div.style.width = this.width
+                div.style.height = this.height
+                div.style.backgroundColor = this.color
+                oBody.appendChild(div)
+                // console.log(this)
+                return this
+            }
+            this.delay = function(number){
+                var start = new Date()
+                while(new Date() - start< number*1000){
+
+                }
+                return this
+            }
+
+            this.remove = function(){
+                var oBody = document.body
+                while(oBody.hasChildNodes()){ //当elem下还存在子节点时 循环继续  
+                
+                    oBody.removeChild(oBody.firstChild);  
+                }  
+            }      
+        }
+        
+        
+        // console.log(new Box(100,100,'red').addTo('body'))
+        new Box(100,100,'red').addTo("body").addTo("body").delay(3).remove()
+    </script>
+</body>
+</html>

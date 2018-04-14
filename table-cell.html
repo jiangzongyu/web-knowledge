@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+    <head>
+        <meta charset="UTF-8" />
+        <title>CSS水平垂直居中实现方式--定位实现</title>
+        <style type="text/css">
+            *{
+                margin: 0;
+                padding: 0;    
+            }
+            .p{
+                width: 1000px;
+                height: 500px;
+                border: 1px solid red;
+                display: table-cell;
+                /*vertical-align: middle; 实现垂直居中*/
+                vertical-align: middle;
+            }
+            .c{
+                width: 200px;
+                height: 200px;
+                border: 1px solid green;
+                /*margin: 0 auto; 实现水平居中*/
+                margin: 0 auto;    
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="p">
+            <div class="c">
+                子元素
+            </div>
+        </div>
+        
+    </body>
+
+</html>
