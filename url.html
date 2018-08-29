@@ -8,18 +8,6 @@
 </head>
 <body>
     <script>
-        // var parser = document.createElement('a');    
-        // parser.href = "http://example.com:3000/pathname/?search=test#hash";    
-        // obj = {
-        //     protocol:parser.protocol, // => "http:"    
-        //     hostname:parser.hostname, // => "example.com"    
-        //     port:parser.port,     // => "3000"    
-        //     pathname : parser.pathname, // => "/pathname/"    
-        //     search : parser.search,   // => "?search=test"    
-        //     hash : parser.hash,    // => "#hash"    
-        //     host : parser.host     // => "example.com:3000"    
-        // }
-        // console.log(obj);
         function showWindowHref(url){
             // var sHref = window.location.href;
             var sHref = 'www.runoob.com/jquery/misc-trim.html?channelid=12333&name=xiaoming&age=23';
@@ -29,14 +17,14 @@
             }
             var arr = args[1].split('&');
             var obj = {};
-            for(var i = 0;i< arr.length;i++){
-                var arg = arr[i].split('=');
-                obj[arg[0]] = arg[1];
-            }
+            arr.forEach(function (item) {
+                var a = item.split('=')
+                obj[a[0]] = a[1]
+            })
             return obj;
         }
         var href = showWindowHref(); // obj
-        console.log(href['name']); // xiaoming
+        console.log(href); // xiaoming
     </script>
 </body>
 </html>

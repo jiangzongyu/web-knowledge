@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    var str = 'aslfdlklsdf'
+    var arr = str.split('')
+    var obj = {}
+//    arr.map(function(current, index, arr) {
+//        return !obj[current] ? obj[current] = 1 : obj[current] ++
+//    })
+    arr.forEach(function (current, index, arr) {
+        if ( !obj[current] ) {
+            obj[current] = 1
+        } else {
+            obj[current] ++
+        }
+    })
+    console.log(obj)
+</script>
+</body>
+</html>
