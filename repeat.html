@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    function duplicates(arr) {
+        let a = []
+        let b = []
+        for (let i=0; i < arr.length; i++) {
+            if (a.indexOf(arr[i]) == -1) {
+                a.push(arr[i])
+            } else {
+                if (b.indexOf(arr[i]) == -1)
+                b.push(arr[i])
+            }
+        }
+        return b
+    }
+    console.log(duplicates([1, 2, 4, 4, 3, 3, 1, 5, 3]))
+</script>
+</body>
+</html>

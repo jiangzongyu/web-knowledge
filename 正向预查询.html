@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    var str = 'http://www.baidu.com?tag=t&name=tom&age=20'
+    var str1 = 'tag=t&name=tom&age=20'
+    var reg = /\w+(?==)/g
+    var reg2 = /(\w+)=(\w+)/g
+    console.log(str.match(reg2)) // ["tag=t", "name=tom", "age=20"]
+    console.log(str.match(reg)) // ["tag", "name", "age"]
+</script>
+</body>
+</html>

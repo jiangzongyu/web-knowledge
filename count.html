@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    function count(arr, item) {
+        return arr.filter(function (value, index, arr) {
+            return value == item
+        }).length
+    }
+    console.log(count([1, 2, 4, 4, 3, 4, 3], 4))
+</script>
+</body>
+</html>
