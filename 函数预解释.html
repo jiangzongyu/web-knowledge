@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    function functions(flag) {
+//        var getValue
+//        if (flag) {
+//            getValue = function () { return 'a'; }
+//        } else {
+//            getValue = function () { return 'b'; }
+//        }
+        if (flag) {
+            function getValue() { return 'a'; }
+        } else {
+            function getValue() { return 'b'; }
+        }
+        return getValue();
+    }
+    console.log(functions(true))
+</script>
+</body>
+</html>

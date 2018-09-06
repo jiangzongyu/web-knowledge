@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    function count(start, end) {
+        console.log(start)
+        var timer = setInterval(() => {
+                    if (start>=end){
+            clearInterval(timer)
+        } else {
+            console.log(start++)
+        }
+    }, 1000)
+        return {
+        function cancel(){
+            console.log('132')
+                clearInterval(timer)
+            }
+        }
+    }
+    var t = count(1,50)
+console.log(count(1,50))
+</script>
+</body>
+</html>
